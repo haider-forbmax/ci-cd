@@ -6,5 +6,10 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: hello
         run: echo "hello world"
+      - name: run the pythin file
+        run: | 
+          pip install -r requirements.txt
+          python ci.py
